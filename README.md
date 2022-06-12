@@ -13,20 +13,20 @@ The main goal is to reach the biggest total sum of all rolls near 16. The rules 
 The computer starts to roll the dice and decides when to stop.
 Then is the player who does the rolls.
 
-Input:
+## Input:
 First the player enters his/her name.
 When the computer is done, the player strts the rolling and by typing "c" the games continues, by typing "s" the game is over.
 
-Solution
+## Solution
 - A total sum equal or bigger than 16 means lose for that player.
 - If both players have equal total sum, then the result is draw.
 - The player with bigger total sum, euqal ot less than 16, wins.
 
-Source code:
+## Source code:
 The source code can be found [here](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/src/Main.java)
 
 
-Screenshots:
+## Screenshots:
 Computer's turn | Player's turn
 :--------------:| :--------------:
 ![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg) | ![player](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/player.jpg)
