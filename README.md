@@ -27,6 +27,7 @@ The source code can be found [here](https://github.com/PepiZlatev/sixteen-is-dea
 
 
 Screenshots:
-![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg)
+Computer's turn | Player's turn
+:--------------:| :--------------:
+![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg) | ![player](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/player.jpg)
 
-![player](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/player.jpg)
