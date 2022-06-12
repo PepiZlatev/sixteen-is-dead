@@ -1,6 +1,6 @@
 # The "Sixteen is Dead" Game
 
-A console-based Java implementation of the "Rock - Paper - Scissors" game.
+A console-based Java implementation of the "Sixteen is dead" game.
 
 ![dice](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/dice.jpg?)
 
