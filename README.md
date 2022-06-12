@@ -28,4 +28,4 @@ Source code:
 Screenshots:
 ![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg)
 
-![alt text](https://github.com/[username]/sixteen-is-dead/blob/master/img/player.jpg?raw=true)
+![player](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/player.jpg)
