@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter players name: ");
+        System.out.println("Enter player's name: ");
         String playerName = scan.nextLine();
         String computerName = "Computer";
 
@@ -16,13 +16,13 @@ public class Main {
 
         //Calculate the sum of all dice rolls done by the computer
         int computerSum = computerRollDice(computerName);
-
+        System.out.println();
         System.out.printf("Computer done rolling, next is: %s!%n", playerName);
         System.out.println();
 
         String input = "";
         //Calculate the sum of all dice rolls done by the player
-        int playerSum = playerRollDice(scan, playerName, input);
+        int playerSum = playerRollDice(scan, playerName, input, computerSum);
 
         System.out.println();
         //Print the result of the game
@@ -42,7 +42,7 @@ public class Main {
         while (true) {
             sum = getSumOfRolls(computerName, sum);
 
-            //If the sum of all dice rolls is bigger than 10, then the computer
+            // If the sum of all dice rolls is bigger than 10, then the computer
             // can decide either to roll again or not with probability of 1/2
             // If the drawProbability == 1 then the computer rolls once more
             if (sum >= 10) {
@@ -74,7 +74,7 @@ public class Main {
         System.out.println("Total sum of all dice rolls: " + sum);
 
         if (sum >= 16) {
-            System.out.printf("%s has lost the game due to too large sum!%n", name);
+            System.out.printf("%s has lost the game due to sum bigger than 16!%n", name);
             System.exit(0);
         }
         return sum;
@@ -83,22 +83,40 @@ public class Main {
     /**
      * Method that calculates the sum of all dice rolls done by the player
      *
-     * @param scan       Scanner Object
-     * @param playerName name of the player
-     * @param input      letter input for either continuing the rolls or stop
+     * @param scan        Scanner Object
+     * @param playerName  name of the player
+     * @param input       letter input for either continuing the rolls or stop
+     * @param computerSum sum of all dice rolls made by the computer
      * @return sum of all dice rolls
      */
-    private static int playerRollDice(Scanner scan, String playerName, String input) {
+    private static int playerRollDice(Scanner scan, String playerName, String input, int computerSum) {
         int sum = 0;
         while (!"s".equalsIgnoreCase(input)) {
             sum = getSumOfRolls(playerName, sum);
 
-            System.out.println("Enter \"c\" to continue or \"s\" to stop drawing:");
-            input = scan.nextLine();
-
-            input = checkInputLetter(scan, input);
+            if (sum > computerSum) {
+                input = checkIfPlayerWins(scan);
+            } else {
+                System.out.println("Enter \"c\" to continue or \"s\" to stop rolling:");
+                input = scan.nextLine();
+                input = checkInputLetter(scan, input);
+            }
         }
         return sum;
+    }
+
+    /**
+     * Method that tells the player that he/she is the winner
+     *
+     * @param scan Scanner Object
+     * @return input
+     */
+    private static String checkIfPlayerWins(Scanner scan) {
+        System.out.println("You are the winner for the moment.");
+        System.out.println("Enter \"c\" to continue or \"s\" to stop rolling:");
+
+        String input = scan.nextLine();
+        return checkInputLetter(scan, input);
     }
 
     /**
@@ -110,7 +128,7 @@ public class Main {
      */
     private static String checkInputLetter(Scanner scan, String input) {
         while (!input.equalsIgnoreCase("c") && !input.equalsIgnoreCase("s")) {
-            System.out.println("Please re-enter \"c\" to continue or \"s\" to stop drawing:");
+            System.out.println("Please re-enter \"c\" to continue or \"s\" to stop rolling:");
             input = scan.nextLine();
         }
         return input;
@@ -135,7 +153,7 @@ public class Main {
         }
 
         System.out.println("Result: ");
-        System.out.printf("Computer %d - %d Player%n", computerSum, playerSum);
+        System.out.printf("Computer %d - %d %s%n", computerSum, playerSum, playerName);
         System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
     }
 }
