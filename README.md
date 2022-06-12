@@ -1,5 +1,5 @@
 # The "Sixteen is Dead" Game
-(https://github.com/PepiZlatev/sixteen-is-dead/blob/master/dice.jpg?raw=true)
+(https://github.com/PepiZlatev/sixteen-is-dead/tree/master/img?raw=true)
 
 A console-based Java implementation of the "Rock - Paper - Scissors" game.
 "Sixteen is dead" is a simple two player game, where you and your oponent (the computer) roll a singel dice. 
