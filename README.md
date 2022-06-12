@@ -26,6 +26,6 @@ Source code:
 
 
 Screenshots:
-![alt text](https://github.com/[username]/sixteen-is-dead/blob/master/img/computer.jpg?raw=true)
+![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg)
 
 ![alt text](https://github.com/[username]/sixteen-is-dead/blob/master/img/player.jpg?raw=true)
