@@ -23,7 +23,9 @@ Solution
 - The player with bigger total sum, euqal ot less than 16, wins.
 
 Source code:
-The source code can be found [here](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/src/Main.java)
+![sixteen is dead](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/src/Main.java)
+
+
 Screenshots:
 ![computer](https://github.com/PepiZlatev/sixteen-is-dead/blob/master/img/computer.jpg)
 
